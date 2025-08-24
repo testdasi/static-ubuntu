@@ -9,6 +9,9 @@ else
     source /testdasi/scripts-install/install-tor.sh
 fi
 
+## Ensure critical packages are not autoremove
+source /testdasi/scripts-install/install-openvpn-client-final.sh
+
 ## Make copy of static folder ##
 mkdir -p /static-ubuntu
 cp -rf /testdasi/scripts-debug /static-ubuntu/
