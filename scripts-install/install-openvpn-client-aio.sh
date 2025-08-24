@@ -36,8 +36,8 @@ cp -rf /testdasi/openvpn-client /static-ubuntu/
 
 # Improve compatibility with old versions #
 rm -Rf /etc/openvpn
-cp -n /static-ubuntu/openvpn-client/entrypoint.sh /
-cp -n /static-ubuntu/openvpn-client/healthcheck.sh /
+cp --update=none /static-ubuntu/openvpn-client/entrypoint.sh /
+cp --update=none /static-ubuntu/openvpn-client/healthcheck.sh /
 
 ## chmod scripts ##
 chmod +x /*.sh
