@@ -29,6 +29,9 @@ else
     echo "$(date "+%d.%m.%Y %T") Skip plus pack due to build option ${BUILD_OPT}" >> /build.info
 fi
 
+## Ensure critical packages are not autoremove
+source /testdasi/scripts-install/install-openvpn-client-final.sh
+
 ## Make copy of static folder ##
 mkdir -p /static-ubuntu
 cp -rf /testdasi/scripts-debug /static-ubuntu/
